@@ -1,76 +1,78 @@
 # кнопка "Войти в аккаунт"
 from copyreg import constructor
 
-sign_in_button = './/button[text() = "Войти в аккаунт"]'
+from selenium.webdriver.common.devtools.v85.service_worker import RegistrationID
+
+SIGN_IN_BTN = './/button[text() = "Войти в аккаунт"]'
 
 # ссылка "Зарегистрироваться"
-sign_up_link = '//a[text() = "Зарегистрироваться"]'
+SIGN_OP_LINK = '//a[text() = "Зарегистрироваться"]'
 
 # поле для ввода имени на странице регистрации
-name_field = '//fieldset[1]//input[@name="name"]'
+NAME_FIELD = '//fieldset[1]//input[@name="name"]'
 
 # поле для ввода email
-email_field = '//fieldset[2]//input[@name="name"]'
+EMAIL_FIELD = '//fieldset[2]//input[@name="name"]'
 
 # поле для ввода пароля
-password_field = './/input[@name = "Пароль"]'
+PASSWORD_FIELD = './/input[@name = "Пароль"]'
 
 # кнопка "Зарегистрироваться"
-registration_button = '//button[text() = "Зарегистрироваться"]'
+REGISTRATION_BTN = '//button[text() = "Зарегистрироваться"]'
 
 # кнопка "Войти"
-login_button = "//button[text() = 'Войти']"
+LOGIN_BTN = "//button[text() = 'Войти']"
 
 # ошибка при некорректном пароле
-invalid_password_error = "//p[text() = 'Некорректный пароль']"
+INVALID_PASSWORD_ERROR = "//p[text() = 'Некорректный пароль']"
 
 # поле для ввода email на странице авторизации
-email_field_login_page = "//label[text()='Email']/following-sibling::input"
+EMAIL_FIELD_LOGIN_PAGE = "//label[text()='Email']/following-sibling::input"
 
 # поле для пароля на странице авторизации
-password_field_login_page = "//input[@name = 'Пароль']"
+PASSWORD_FIELD_LOGIN_PAGE = "//input[@name = 'Пароль']"
 
 # кнопка "Войти" на странице авторизации
-sign_in_button_login_page = "//button[text() = 'Войти']"
+SIGN_IN_BTN_LOGIN_PAGE = "//button[text() = 'Войти']"
 
 # кнопка "Оформить заказ"
-make_order_button = "//button[text() = 'Оформить заказ']"
+MAKE_ORDER_BTN = "//button[text() = 'Оформить заказ']"
 
 # кнопка "Личный кабинет"
-personal_account_button = "//p[text() = 'Личный Кабинет']"
+PERSONAL_ACCOUNT_BTN = "//p[text() = 'Личный Кабинет']"
 
 # кнопка "Войти" на странице регистрации
-sign_in_btn_register_page = "//a[text() = 'Войти']"
+SIGN_IN_BTN_REGISTER_PAGE = "//a[text() = 'Войти']"
 
 # кнопка "Восстановить пароль"
-password_recovery_btn = "//a[text() = 'Восстановить пароль']"
+PASSWORD_RECOVERY_BTN = "//a[text() = 'Восстановить пароль']"
 
 # кнопка "Войти" на странице восстановления пароля
-sign_in_butn_forgot_password_page = "//a[text() = 'Войти']"
+SIGN_IN_BTN_FORGOT_PASSWORD_PAGE = "//a[text() = 'Войти']"
 
 # кнопка "Конструктор"
-constructor_btn = ".//p[text() = 'Конструктор']"
+CONSTRUCTOR_BTN = ".//p[text() = 'Конструктор']"
 
 # логотип stellar burgers
-main_logo = "//div[@class='AppHeader_header__logo__2D0X2']"
+MAIN_LOGO = "//div[@class='AppHeader_header__logo__2D0X2']"
 
 # кнопка "Выход" в личном кабинете
-logout_btn = "//button[text() = 'Выход']"
+LOGOUT_BTN = "//button[text() = 'Выход']"
 
 # блок "Соусы"
-sauces_section = "//div[.='Соусы']"
+SAUCES_SECTION = "//div[.='Соусы']"
 
 # блок "Булки"
-buns_section = "//div[.='Булки']"
+BUNS_SECTION = "//div[.='Булки']"
 
 # блок "Начинки"
-toppings_section = "//div[.='Начинки']"
+TOPPINGS_SECTION = "//div[.='Начинки']"
 
 # заголовок "Булки"
-buns_header = "//h2[.='Булки']"
+BUNS_HEADER = "//h2[.='Булки']"
 
 # заголовок "Соусы"
-sauces_header = "//h2[.='Соусы']"
+SAUCES_HEADER = "//h2[.='Соусы']"
 
 # заголовок "Начинки"
-toppings_header = "//h2[.='Начинки']"
+TOPPINGS_HEADER = "//h2[.='Начинки']"

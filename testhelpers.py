@@ -9,10 +9,10 @@ from conftest import driver
 class TestHelpers:
     @staticmethod
     def successful_login(driver):
-        driver.find_element(By.XPATH, locators.sign_in_button).click()
-        driver.find_element(By.XPATH, locators.email_field_login_page).send_keys('kuratova_19@mail.ru')
-        driver.find_element(By.XPATH, locators.password_field_login_page).send_keys('123456789')
-        driver.find_element(By.XPATH, locators.sign_in_button_login_page).click()
+        driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD_LOGIN_PAGE).send_keys('kuratova_19@mail.ru')
+        driver.find_element(By.XPATH, locators.PASSWORD_FIELD_LOGIN_PAGE).send_keys('123456789')
+        driver.find_element(By.XPATH, locators.SIGN_IN_BTN_LOGIN_PAGE).click()
 
     @staticmethod
     def generate_email():
