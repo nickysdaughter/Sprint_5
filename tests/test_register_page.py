@@ -14,8 +14,8 @@ class TestRegistration:
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
         driver.find_element(By.XPATH, locators.SIGN_OP_LINK).click()
         driver.find_element(By.XPATH, locators.NAME_FIELD).send_keys('test')
-        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.TestHelpers.generate_email())
-        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.TestHelpers.generate_password())
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.generate_email())
+        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.generate_password())
         driver.find_element(By.XPATH, locators.REGISTRATION_BTN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, locators.LOGIN_BTN)))
 
@@ -25,8 +25,8 @@ class TestRegistration:
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
         driver.find_element(By.XPATH, locators.SIGN_OP_LINK).click()
         driver.find_element(By.XPATH, locators.NAME_FIELD).send_keys('')
-        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.TestHelpers.generate_email())
-        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.TestHelpers.generate_password())
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.generate_email())
+        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.generate_password())
         driver.find_element(By.XPATH, locators.REGISTRATION_BTN).click()
 
         assert 'register' in driver.current_url
@@ -37,7 +37,7 @@ class TestRegistration:
         driver.find_element(By.XPATH, locators.SIGN_OP_LINK).click()
         driver.find_element(By.XPATH, locators.NAME_FIELD).send_keys('test')
         driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(invalid_email)
-        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.TestHelpers.generate_password())
+        driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(testhelpers.generate_password())
         driver.find_element(By.XPATH, locators.REGISTRATION_BTN).click()
 
         assert 'register' in driver.current_url
@@ -47,7 +47,7 @@ class TestRegistration:
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
         driver.find_element(By.XPATH, locators.SIGN_OP_LINK).click()
         driver.find_element(By.XPATH, locators.NAME_FIELD).send_keys('test')
-        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.TestHelpers.generate_email())
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.generate_email())
         driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys(invalid_password)
         driver.find_element(By.XPATH, locators.REGISTRATION_BTN).click()
 
@@ -59,7 +59,7 @@ class TestRegistration:
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
         driver.find_element(By.XPATH, locators.SIGN_OP_LINK).click()
         driver.find_element(By.XPATH, locators.NAME_FIELD).send_keys('test')
-        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.TestHelpers.generate_email())
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD).send_keys(testhelpers.generate_email())
         driver.find_element(By.XPATH, locators.PASSWORD_FIELD).send_keys('')
         driver.find_element(By.XPATH, locators.REGISTRATION_BTN).click()
 
