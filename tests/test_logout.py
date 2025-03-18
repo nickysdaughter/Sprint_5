@@ -3,14 +3,14 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from conftest import driver
-import testhelpers
+import helpers
 import locators
 
 
 class TestLogout:
 
     def test_logout_in_profile_page_successful(self, driver):
-        testhelpers.successful_login(driver)
+        helpers.successful_login(driver)
         driver.find_element(By.XPATH, locators.PERSONAL_ACCOUNT_BTN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, locators.LOGOUT_BTN)))
         driver.find_element(By.XPATH, locators.LOGOUT_BTN).click()

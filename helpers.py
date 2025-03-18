@@ -5,11 +5,12 @@ from selenium.webdriver.common.by import By
 import locators
 
 from conftest import driver
+from data import UserData
 
 def successful_login(driver):
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN).click()
-        driver.find_element(By.XPATH, locators.EMAIL_FIELD_LOGIN_PAGE).send_keys('kuratova_19@mail.ru')
-        driver.find_element(By.XPATH, locators.PASSWORD_FIELD_LOGIN_PAGE).send_keys('123456789')
+        driver.find_element(By.XPATH, locators.EMAIL_FIELD_LOGIN_PAGE).send_keys(UserData.email)
+        driver.find_element(By.XPATH, locators.PASSWORD_FIELD_LOGIN_PAGE).send_keys(UserData.password)
         driver.find_element(By.XPATH, locators.SIGN_IN_BTN_LOGIN_PAGE).click()
 
 def generate_email():

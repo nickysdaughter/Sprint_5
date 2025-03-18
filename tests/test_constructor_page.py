@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-import testhelpers
+import helpers
 from conftest import driver
 import locators
 
@@ -8,7 +8,7 @@ import locators
 class TestConstructorPage:
 
     def test_from_personal_page_to_constructor_page_by_btn(self, driver):
-        testhelpers.successful_login(driver)
+        helpers.successful_login(driver)
         driver.find_element(By.XPATH, locators.PERSONAL_ACCOUNT_BTN).click()
         driver.find_element(By.XPATH, locators.CONSTRUCTOR_BTN).click()
         make_order_element = driver.find_element(By.XPATH, locators.MAKE_ORDER_BTN)
@@ -16,7 +16,7 @@ class TestConstructorPage:
         assert make_order_element.is_displayed()
 
     def test_from_personal_page_to_constructor_page_by_logo(self, driver):
-        testhelpers.successful_login(driver)
+        helpers.successful_login(driver)
         driver.find_element(By.XPATH, locators.PERSONAL_ACCOUNT_BTN).click()
         driver.find_element(By.XPATH, locators.MAIN_LOGO).click()
         make_order_element = driver.find_element(By.XPATH, locators.MAKE_ORDER_BTN)
